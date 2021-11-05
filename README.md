@@ -5,9 +5,12 @@
 [Course notes](https://observablehq.com/@anjana/functional-javascript-first-steps)
 
 
-- [What is functional programming?](##what-is-functional-programming)
-- [Pure functions](##pure-functions)
-- [Side effects](##side-effects)
+- [What is functional programming?](#what-is-functional-programming)
+- [Pure functions](#pure-functions)
+- [Side effects](#side-effects)
+- [Pure vs Impure functions](#pure-vs-impure-functions)
+- [Why functional programming?](#why-functional-programming)
+- [Why functional JavaScript?](#why-functional-javascript)
 
 
 ## What is functional programming?
@@ -61,11 +64,20 @@ Anything going on inside the program (logic, computations, manipulations of data
 All of the impure side effects we can force out to the outer edges of our application. Everything inside the program is deterministic. 
 
 
+## Why functional programming? 
+
+  * More predictable, safer 
+  * Easier to test/debug
+  * Makes our lives easier
+  * You can do everything with functions
+
+  > Instead of thinking how should my program run, think: what should my program take in, and what should it return out? 
 
 
+### Why functional JavaScript? 
 
-
-
+  * Easier to work with/write than Object-Oriented 
+  * Established community & tools
 
 
 
