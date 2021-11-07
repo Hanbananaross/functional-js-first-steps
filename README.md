@@ -13,7 +13,7 @@
 - [Why functional JavaScript?](#why-functional-javascript)
 
 
-## What is functional programming?
+# What is functional programming?
 
   * A coding style supported by some languages 
   * JavaScript is not usually described as a functional language, but is a good way to learn functional programming 
@@ -81,3 +81,19 @@ All of the impure side effects we can force out to the outer edges of our applic
 
 
 
+## Recursion 
+
+Iteration: imperative, looping, stateful
+
+Recursion: functional, self-referential, stateless 
+
+> 2 ways of thinking about how to get the computer to do the same operation lots of different times. 
+
+In the iteration: we think about the repetition in terms of loops (for, while) - usually changing a variable eg: counter
+Value changing over time, stateful. 
+
+In the recursive: instead of using for/while, using self reference. A function calling itself from within itself. 
+More functional way.
+To each call of the function, all I care about is the input coming in, and the output going out. We're not changing the values over time, we're getting rid of the state: stateless. 
+
+Iteration isn't functional, use recursion instead. 
