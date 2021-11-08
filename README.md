@@ -97,3 +97,18 @@ More functional way.
 To each call of the function, all I care about is the input coming in, and the output going out. We're not changing the values over time, we're getting rid of the state: stateless. 
 
 Iteration isn't functional, use recursion instead. 
+
+
+## Recursion performance and proper tail calls 
+
+There is a performance difference between iterative and recursive functions. 
+
+The recursive functions are calculating over again and again, and using memory. 
+
+The recursive functions can call themselves multiple times. Multiple times that we're making the same call with the same argument. 
+
+2 problems: can have double recursive call (doing work multiple times.) One solution could be memoization (cacheing the results of the functions), when you call the first time you don't need to repeat the computation because the value from the first time it is called is stored. 
+
+https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19
+
+The call stack: a new frame gets added each time the function is called, and the computer has a finite amount of memory. Recursion can go on potentiall infinitely in a finite resource environment. We keep adding frames to the stack and we can run out of room (call stack size exceeded). Potential solution: tail call optimization - this is a feature of some runtimes where it can perform an optimization on the recursive code if it is written in a particular way. 
