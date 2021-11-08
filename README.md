@@ -13,7 +13,7 @@
 - [Why functional JavaScript?](#why-functional-javascript)
 
 
-# What is functional programming?
+## What is functional programming?
 
   * A coding style supported by some languages 
   * JavaScript is not usually described as a functional language, but is a good way to learn functional programming 
@@ -112,3 +112,40 @@ The recursive functions can call themselves multiple times. Multiple times that 
 https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19
 
 The call stack: a new frame gets added each time the function is called, and the computer has a finite amount of memory. Recursion can go on potentiall infinitely in a finite resource environment. We keep adding frames to the stack and we can run out of room (call stack size exceeded). Potential solution: tail call optimization - this is a feature of some runtimes where it can perform an optimization on the recursive code if it is written in a particular way. 
+
+This is a feature of JavaScript engines, but not all engines implement tail call optimization - even if you write the code that way.
+Safari does support tail call optimizations. We don't have tail call optimization in Chrome. 
+
+
+## Higher-order functions
+
+First-class functions - can be passed around as values (like callback functions). 
+
+Higher-order functions - take other functions as input/output 
+
+A higher-order function is a function that takes in another function/returns out another function. It takes other functions and inputs or outputs. 
+This is a key technique of functional programming. 
+Don't loop - use higher-order functions like map, reduce and filter instead. 
+This is another alternative to iterative. 
+Array.map() for eg. 
+
+Map, reduce and filter and very useful functions because they allow us to think about our applications of what we might use an iterative loop for - we can process the array with functions instead of loops. 
+
+https://www.datasciencecentral.com/forum/topics/what-is-map-reduce
+
+
+Each one of these functions takes in an array, and they use another function to do something with each item of the array. 
+
+Filter() 
+- Takes in an array and a function, and returns an array
+- That inner function will take in one element and return a true/false boolean
+- isNotGross() - use that to filter all of the elements to remove the ones that are "gross" 
+- if you apply filter() to the ingrediants array you will get a shorter array that only has the things that returned true 
+
+Map()
+- Takes in an array and a function, and returns an array 
+- Pass in that function and the arrays to the map and it will apply the function to each item of the array 
+- The array it returns will be a new array, instead of a mutation of the array 
+
+Reduce()
+- Takes in an array and a function but returns a singe value 
